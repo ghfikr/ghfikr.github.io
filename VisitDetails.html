@@ -35,10 +35,10 @@
         <div class="w3-section">
 		  <div id="IDLANG" >
 		  <fieldset> <legend>Language</legend>
-		  <input class="w3-check" type="checkbox" name="entry.2108730671"  id="b1" value="English">English<br>
-		  <input class="w3-check" type="checkbox" name="entry.2108730671"  id="b2" value="Urdu">Urdu<br>
-		  <input class="w3-check" type="checkbox" name="entry.2108730671"  id="b3" value="Hindi">Hindi<br>
-		  <input class="w3-check" type="checkbox" name="entry.2108730671"  id="b4" value="Arabic">Arabic<br>
+		  <input class="w3-check" type="checkbox" name="entry.2108730671"  id="c1" value="English">English<br>
+		  <input class="w3-check" type="checkbox" name="entry.2108730671"  id="c2" value="Urdu">Urdu<br>
+		  <input class="w3-check" type="checkbox" name="entry.2108730671"  id="c3" value="Hindi">Hindi<br>
+		  <input class="w3-check" type="checkbox" name="entry.2108730671"  id="c4" value="Arabic">Arabic<br>
 		  </fieldset>
 		  </div> 
         </div>
@@ -60,6 +60,7 @@ $("#Name").val($.urlParam('Name'));
 var data =($.urlParam('Sts'))+'';
 if (data)
 {
+data = data.replace(/, /g , ",");	
 var dataarray=data.split(",");
 $('#IDSTATUS [value="'+dataarray.join('"],[value="')+'"]').prop('checked',true)
 }
